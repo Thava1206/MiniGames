@@ -38,7 +38,36 @@ function check_spot(r,c) {
     }
     return true;
 }
+function winning_condition() {
+    if ((BOARD[0][0] == 'X' && BOARD[0][1] =='X' && BOARD[0][2] == 'X')) {
+        console.log("YOHOHO");
+    }
+    if ((BOARD[1][0] == 'X' && BOARD[1][1] =='X' && BOARD[1][2] == 'X')) {
+        console.log("YOHOHO");
+    }
+    if ((BOARD[2][0] == 'X' && BOARD[2][1] =='X' && BOARD[2][2] == 'X')) {
+        console.log("YOHOHO");
+    }
+
+    if ((BOARD[0][0] == 'X' && BOARD[1][0] =='X' && BOARD[2][0] == 'X')) {
+        console.log("YOHOHO");
+    }
+    if ((BOARD[0][1] == 'X' && BOARD[1][1] =='X' && BOARD[2][1] == 'X')) {
+        console.log("YOHOHO");
+    }
+    if ((BOARD[0][2] == 'X' && BOARD[1][2] =='X' && BOARD[2][2] == 'X')) {
+        console.log("YOHOHO");
+    }
+
+    if ((BOARD[0][0] == 'X' && BOARD[1][1] =='X' && BOARD[2][2] == 'X')) {
+        console.log("YOHOHO");
+    }
+    if ((BOARD[0][2] == 'X' && BOARD[1][1] =='X' && BOARD[2][0] == 'X')) {
+        console.log("YOHOHO");
+    }
+}
 game_board();
-input_x(1,1);
-input_x(1,2);
-input_x(1,2);
+input_x(0,0);
+input_x(0,1);
+input_x(0,2);
+winning_condition();
