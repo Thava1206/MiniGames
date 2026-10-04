@@ -1,6 +1,12 @@
 const ROW = 3;
 const COLUMN = 3;
 const BOARD = [];
+
+function start() {
+    game_board();
+    print_board();
+    
+}
 function game_board() {
 
     for (let i = 0; i < ROW; i++) {
@@ -38,7 +44,41 @@ function check_spot(r,c) {
     }
     return true;
 }
+function computer_turn() {
+    const r = Math.floor(Math.random() * 3);
+    const c = Math.floor(Math.random() * 3);
+    return [r,c];
+}
 function winning_condition() {
+    if ((BOARD[0][0] == 'Y' && BOARD[0][1] =='Y' && BOARD[0][2] == 'Y')) {
+        console.log("YOHOHO");
+    }
+    if ((BOARD[1][0] == 'Y' && BOARD[1][1] =='Y' && BOARD[1][2] == 'Y')) {
+        console.log("YOHOHO");
+    }
+    if ((BOARD[2][0] == 'Y' && BOARD[2][1] =='Y' && BOARD[2][2] == 'Y')) {
+        console.log("YOHOHO");
+    }
+
+    if ((BOARD[0][0] == 'Y' && BOARD[1][0] =='Y' && BOARD[2][0] == 'Y')) {
+        console.log("YOHOHO");
+    }
+    if ((BOARD[0][1] == 'Y' && BOARD[1][1] =='Y' && BOARD[2][1] == 'Y')) {
+        console.log("YOHOHO");
+    }
+    if ((BOARD[0][2] == 'Y' && BOARD[1][2] =='Y' && BOARD[2][2] == 'Y')) {
+        console.log("YOHOHO");
+    }
+
+    if ((BOARD[0][0] == 'Y' && BOARD[1][1] =='Y' && BOARD[2][2] == 'Y')) {
+        console.log("YOHOHO");
+    }
+    if ((BOARD[0][2] == 'Y' && BOARD[1][1] =='Y' && BOARD[2][0] == 'Y')) {
+        console.log("YOHOHO");
+    }
+
+
+
     if ((BOARD[0][0] == 'X' && BOARD[0][1] =='X' && BOARD[0][2] == 'X')) {
         console.log("YOHOHO");
     }
@@ -66,8 +106,3 @@ function winning_condition() {
         console.log("YOHOHO");
     }
 }
-game_board();
-input_x(0,0);
-input_x(0,1);
-input_x(0,2);
-winning_condition();
